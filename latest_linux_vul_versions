@@ -1,0 +1,8 @@
+# sudo
+< 1.8.2 --> -u#-1
+
+# function injection
+< 4.2-048
+
+# Linux kernal exploit "dirtycow"
+< 4.8.3
