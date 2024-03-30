@@ -22,7 +22,7 @@ smbclient \\$ip\$share_name -U '' -P ''
 # Hydra
 ### BruteForce with username and password
 ```bash
-hydra -<with l know username L for wordlist> '' -p< or P> '' ssh://$ip or ftp://$ip
+hydra -l '' -p '' ssh://$ip or ftp://$ip
 ```
 ### Http post form
 ```bash
