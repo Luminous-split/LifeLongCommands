@@ -3,25 +3,31 @@
 crackmapexec smb $ip -u '' -p '' --$Flags
 
 ## Pass the hashes
+```bash
 crackmapexec smb $ip -u '' -H '' --$Flags
-
+```
 ## JohnHammond CME to Self Hosted AD DC
 https://www.youtube.com/watch?v=WPnFnPkOWIg&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp&index=6
 
 
 # Smbclient
 ## Enumerate shares
+```bash
 smbclient -L \\$ip\Share -U ''
+```
 ## Enumerate more with Known Username and password 
+```bash
 smbclient \\$ip\$share_name -U '' -P ''
-
+```
 # Hydra
 ### BruteForce with username and password
+```bash
 hydra -<with l know username L for wordlist> '' -p< or P> '' ssh://$ip or ftp://$ip
-
+```
 ### Http post form
+```bash
 hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
-
+```
 ### Others
 | Command | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
