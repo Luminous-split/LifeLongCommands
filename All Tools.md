@@ -40,4 +40,4 @@ hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
 | hydra -L users.txt -P passwords.txt $ip ldap2 -V -f | LDAP Brute Forcing |
 
 # BloodHound
-
+Installation: https://www.youtube.com/watch?v=yp8fw72oQvY&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp&index=7
