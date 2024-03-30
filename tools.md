@@ -15,13 +15,13 @@ smbclient -L \\$ip\Share -U ''
 smbclient \\$ip\$share_name -U '' -P ''
 
 # Hydra
-## BruteForce with username and password
+### BruteForce with username and password
 hydra -<with l know username L for wordlist> '' -p< or P> '' ssh://$ip or ftp://$ip
 
-## Http post form
+### Http post form
 hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
 
-# Others
+### Others
 | Command | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | hydra -P password-file.txt -v $ip snmp                                                                                                    | Hydra brute force against SNMP                       |
