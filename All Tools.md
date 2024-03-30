@@ -9,7 +9,6 @@ crackmapexec smb $ip -u '' -H '' --$Flags
 ## JohnHammond CME to Self Hosted AD DC
 https://www.youtube.com/watch?v=WPnFnPkOWIg&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp&index=6
 
-
 # Smbclient
 ## Enumerate shares
 ```bash
@@ -19,6 +18,16 @@ smbclient -L \\$ip\Share -U ''
 ```bash
 smbclient \\$ip\$share_name -U '' -P ''
 ```
+
+
+# BloodHound
+Installation: https://www.youtube.com/watch?v=yp8fw72oQvY&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp&index=7
+
+# Evil Winrm
+```bash
+evil-winrm -i $ip -u '' -p ''
+```
+____________________________________________________________________________________________________________________________________________________________________________
 # Hydra
 ### BruteForce with username and password
 ```bash
@@ -44,11 +53,3 @@ hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
 | hydra -l admin -P ./passwordlist.txt $ip -V http-form-post '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location' | Hydra brute force a Wordpress admin login            |
 | hydra -L usernames.txt -P passwords.txt $ip smb -V -f | SMB Brute Forcing |
 | hydra -L users.txt -P passwords.txt $ip ldap2 -V -f | LDAP Brute Forcing |
-
-# BloodHound
-Installation: https://www.youtube.com/watch?v=yp8fw72oQvY&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp&index=7
-
-# Evil Winrm
-```bash
-evil-winrm -i $ip -u '' -p ''
-```
