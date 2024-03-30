@@ -1,8 +1,9 @@
 #  Window Active Directory Pentesting
  # Crackmapexec
 ## With Password
+```bash
 crackmapexec smb $ip -u '' -p '' --$Flags
-
+```
 ## Pass the hashes
 ```bash
 crackmapexec smb $ip -u '' -H '' --$Flags
