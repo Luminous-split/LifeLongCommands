@@ -65,3 +65,10 @@ hydra -l '' -p '' http://$ip_Or_domain/ http-post-form ":/"
 ```bash
 https://developer.redis.com/howtos/quick-start/cheat-sheet/
 ```
+
+# Impacket
+
+## Impacket-lookupsid
+```bash
+impacket-lookupsid domain/guest@10.10.111.17
+```
