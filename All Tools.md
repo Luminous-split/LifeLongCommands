@@ -105,3 +105,7 @@ $> samdump    # Dump SAM database
 $> rpcclient -c enumprivs <target>    # List RPC services
 
 ```
+# Ldapsearch
+```
+ldapsearch -x -h $ip -b base namingcontext
+```
