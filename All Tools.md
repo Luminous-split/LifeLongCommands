@@ -70,9 +70,13 @@ https://developer.redis.com/howtos/quick-start/cheat-sheet/
 
 ## Impacket-lookupsid
 ```bash
-impacket-lookupsid domain/guest@10.10.111.17
+impacket-lookupsid domain/guest@$ip
 ```
 # Kerbrute
 ```
-kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip  10.10.5.221
+kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
+```
+# Rpcclient
+```
+rpcclient -U '' $ip
 ```
