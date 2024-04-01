@@ -72,6 +72,10 @@ https://developer.redis.com/howtos/quick-start/cheat-sheet/
 ```bash
 impacket-lookupsid domain/guest@$ip
 ```
+## Impacker-GetNPUsers
+```
+impacket-GetNPUsers vulnet-rst.local/ -no-pass -userfile users.txt
+```
 # Kerbrute
 ```
 kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
@@ -109,3 +113,4 @@ $> rpcclient -c enumprivs <target>    # List RPC services
 ```
 ldapsearch -x -h $ip -b base namingcontext
 ```
+
