@@ -79,6 +79,7 @@ kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
 # Rpcclient
 ```
 rpcclient -U '' $ip
+
 $> enumdomshares  # Enumerate shares
 
 $> enumdomusers   # List users
