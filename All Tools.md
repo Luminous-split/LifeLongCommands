@@ -72,3 +72,7 @@ https://developer.redis.com/howtos/quick-start/cheat-sheet/
 ```bash
 impacket-lookupsid domain/guest@10.10.111.17
 ```
+# Kerbrute
+```
+kerbrute -users formatted_name_wordlist.txt -domain vulnnet-rst.local -dc-ip  10.10.5.221
+```
