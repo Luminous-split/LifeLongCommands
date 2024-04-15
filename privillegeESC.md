@@ -16,6 +16,10 @@ https://github.com/itm4n/PrintSpoofer
 ```
 https://github.com/ohpe/juicy-potato
 ```
+## Powerup
+```
+https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+```
 ## Powerview
 ```
 https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
