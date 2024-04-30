@@ -1,7 +1,9 @@
 # Active Recon
 ## CLI tools
 whois 
+
 dnsrecon
+
 WafWoof
 
 ## Website Tools
