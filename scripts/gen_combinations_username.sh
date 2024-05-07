@@ -28,6 +28,8 @@ $(echo $firstname | cut -c1-3).$(echo $lastname | cut -c1-3)
 $(echo $firstname | cut -c1)$lastname
 $lastname$firstname
 $lastname-$firstname
+$firstname
+$lastname
 $lastname.$firstname
 $lastname$(echo $firstname | cut -c1)
 $lastname-$(echo $firstname | cut -c1)
