@@ -9,6 +9,7 @@ nmap --script mysql-enum <target>
 nmap --script mysql-empty-password <target>
 nmap --script mysql-info <target>
 nmap --script mysql-variables <target>
+nmap --script mysql-dump-hashes <target>
 
 
 ```
