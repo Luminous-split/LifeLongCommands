@@ -19,4 +19,5 @@ auxillary/scanner/mysql/mysql_schemadump
 auxillary/scanner/mysql/mysql_writable_dirs
 auxillary/scanner/mysql/mysql_file_enum
 auxillary/scanner/mysql/mysql_hashdump
+auxiliary/scanner/mysql/mysql_login 
 ```
