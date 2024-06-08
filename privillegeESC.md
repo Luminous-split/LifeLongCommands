@@ -19,6 +19,10 @@ https://github.com/ohpe/juicy-potato
 ## Powerup
 ```
 https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+
+powershell -ep bypass
+.\PowerUp.ps1
+Invoke-PrivescAudit
 ```
 ## Powerview
 ```
