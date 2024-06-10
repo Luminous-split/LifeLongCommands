@@ -1,4 +1,19 @@
 # SSH Port Forwarding 
+
+## Wompormised Window
+create bat file
+```
+@echo off
+for /L %%i in (1,1,254) do (
+    start "" ping -n 1 192.168.1.%%i | find "Reply"
+)
+
+```
+
+
+
+
+
 ## Direct 
 ```
 You want to access a web server running on 192.168.1.100 on port 80 through an SSH server ssh.example.com.
