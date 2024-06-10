@@ -15,10 +15,10 @@ tshark -r HTTP_traffic.pcap -Y 'ip.src==192.168.252.128 && http' -Tfields -e htt
 ## Wifi Pentesting
 ```
 shark -r WiFi_traffic-pcap -Y 'wlan.fc.type_subtype==0x000c'
-tshark -r WiFi_traffic-pcap -Y 'wlan. fc. type_subtype==8' -Tfields -e wlan. ssid -e wlan.bssid
+tshark -r WiFi_traffic-pcap -Y 'wlan.fc.type_subtype==8' -Tfields -e wlan. ssid -e wlan.bssid
 tshark -r WiFi_traffic.pcap -Y 'wlan.ssid=LazyArtists' -Tfields -e wlan.bssid
 tshark -r WiFi_traffic.pcap -Y 'wlan.ssid==Home_Network' -Tfields -e wlan_radio.channel
 tshark -r WiFi_traffic.pcap -Y 'wlan.fc.type_subtype==0x000c' -Tfields -e wlan.ra
-tshark -r WiFi_traffic.pcap -Y 'wlan. ta==5c:51:88:31:a0:3b && http' -Tfields -e http.user_agent
+tshark -r WiFi_traffic.pcap -Y 'wlan.ta==5c:51:88:31:a0:3b && http' -Tfields -e http.user_agent
 ```
 
