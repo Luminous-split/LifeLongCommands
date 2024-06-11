@@ -1,12 +1,10 @@
 # SSH Port Forwarding 
 
 ## Compormised Window
-create bat file
+powershell
 ```
-@echo off
-for /L %%i in (1,1,254) do (
-    start "" ping -n 1 192.168.1.%%i | find "Reply"
-)
+1..254 | ForEach-Object { $ip = "192.168.1.$_"; if (Test-Connection -ComputerName $ip -Count 1 -Quiet) { Write-Output "$ip is reachable" } else { Write-Output "$ip is unreachable" } }
+
 
 ```
 
