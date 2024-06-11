@@ -1,6 +1,6 @@
 # SSH Port Forwarding 
 
-## Wompormised Window
+## Compormised Window
 create bat file
 ```
 @echo off
@@ -10,7 +10,10 @@ for /L %%i in (1,1,254) do (
 
 ```
 
-
+## Compromised Linux
+```
+for i in {1..254}; do (ping -c 1 192.168.1.${i} | grep "bytes from" &); done;
+```
 
 
 
@@ -30,3 +33,5 @@ You want to make a local web server running on localhost port 3000 accessible fr
 
 ssh -R 8080:localhost:3000 user@ssh.example.com
 ```
+
+## 
