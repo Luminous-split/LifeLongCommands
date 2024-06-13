@@ -13,6 +13,15 @@ route add 10.10.10.0 255.255.255.0 1,2,3(session id)
 
 
 # Proxy
+## SSH Proxy
+- Execute following command on the compromised machine
+- Proxy service will be on port 4444 of the attacking machine(ssh executing machine)
+-  Use either with proxychain sock4 or other alternatives
+```
+ssh -D 4444 compromised_machine@192.168.1.110
+```
+
+
 ## Metasploit 
 
 
