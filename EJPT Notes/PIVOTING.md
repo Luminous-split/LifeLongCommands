@@ -1,12 +1,12 @@
 # Routing
 ## In msfconsole
 Autoroute (outside meterpreter session)
-"/usr/share/metasploit-framework/modules/post/multi/manage/autoroute.rb"
+- Location: "/usr/share/metasploit-framework/modules/post/multi/manage/autoroute.rb"
 ```
 run autoroute -s 10.10.10.0/20 3
 ```
 route add (Inside meterpreter session)
-"/usr/share/metasploit-framework/lib/rex/post/meterpreter/extensions/stdapi/net/route.rb"
+- Location: "/usr/share/metasploit-framework/lib/rex/post/meterpreter/extensions/stdapi/net/route.rb"
 ```
 route add 10.10.10.0 255.255.255.0 1,2,3(session id)
 ```
