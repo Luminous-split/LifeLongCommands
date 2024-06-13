@@ -35,7 +35,8 @@ for i in {1..254}; do (ping -c 1 192.168.1.${i} | grep "bytes from" &); done;
 ```
 
 
-- **Red Text**: <span style="color: red;">Please take note 192.168.1.100 as attacking machine(my machine) , 192.168.1.110 as compromised machine(victim 1), 192.168.2.100 as internal machine(victim 2)</span>
+# Important!!
+- Please take note 192.168.1.100 as attacking machine(my machine) , 192.168.1.110 as compromised machine(victim 1), 192.168.2.100 as internal machine(victim 2)
 ## Direct 
 - You want to access a web server running on 192.168.2.100 on port 80 through compromised machine 192.168.1.100
 - Take note that !!! 8080 "-L 8080:" !!! is ssh command executing machine localhost port 
