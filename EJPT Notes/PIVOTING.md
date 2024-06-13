@@ -45,10 +45,10 @@ ssh -L 8080:192.168.2.100:80 compromised_machine@192.168.1.100
 
 ## Reverse
 
-You want to make a localhost port 80 on your "ssh command executing machine" accessible from 192.168.2.100 on port 8080.
+You want to make a localhost port 80 on your "ssh command executing machine" accessible from 192.168.1.100 on port 8080.
 
 ```
-ssh -R 8080:localhost:80 compromised_machine@192.168.1100
+ssh -R 8080:localhost:80 compromised_machine@192.168.1.100
 ```
 
 ## 
