@@ -35,17 +35,17 @@ for i in {1..254}; do (ping -c 1 192.168.1.${i} | grep "bytes from" &); done;
 ```
 
 
-- <span style="color: red;">Take note 192.168.1.100 as attacking machine(my machine) , 192.168.1.110 as compromised machine(victim 1), 192.168.2.100 as internal machine(victim 2)</span>
+**Red Text**: <span style="color: red;">Please take note 192.168.1.100 as attacking machine(my machine) , 192.168.1.110 as compromised machine(victim 1), 192.168.2.100 as internal machine(victim 2)</span>
 ## Direct 
-You want to access a web server running on 192.168.2.100 on port 80 through compromised machine 192.168.1.100
-Take note that !!! 8080 "-L 8080:" !!! is ssh command executing machine localhost port 
+- You want to access a web server running on 192.168.2.100 on port 80 through compromised machine 192.168.1.100
+- Take note that !!! 8080 "-L 8080:" !!! is ssh command executing machine localhost port 
 ```
 ssh -L 8080:192.168.2.100:80 compromised_machine@192.168.1.100
 ```
 
 ## Reverse
 
-You want to make a localhost port 80 on your "ssh command executing machine" accessible from 192.168.1.100 on port 8080.
+- You want to make a localhost port 80 on your "ssh command executing machine" accessible from 192.168.1.100 on port 8080.
 
 ```
 ssh -R 8080:localhost:80 compromised_machine@192.168.1.100
