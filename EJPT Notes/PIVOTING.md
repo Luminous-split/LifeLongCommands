@@ -1,14 +1,16 @@
 # SSH Port Forwarding 
 
-## Compormised Window
+## Discovering Alive Hosts from Compormised Machine
+```
+metasploit windows/gather/arp_scanner
+```
+### Window
 powershell
 ```
 1..254 | ForEach-Object { $ip = "192.168.1.$_"; if (Test-Connection -ComputerName $ip -Count 1 -Quiet) { Write-Output "$ip is reachable" } else { Write-Output "$ip is unreachable" } }
-
-
 ```
 
-## Compromised Linux
+### Linux
 ```
 for i in {1..254}; do (ping -c 1 192.168.1.${i} | grep "bytes from" &); done;
 ```
