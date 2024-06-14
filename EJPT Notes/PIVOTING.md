@@ -35,7 +35,7 @@ chisel client --fingerprint "       " 192.168.1.100:8080 R:socks
 ### Chisel Direct
 - Use for reverse-shell connections
 ```
-chisel client --fingerprint "       " 192.168.1.100:8080 0.0.0.0:9999:192.168.1.100:9999
+chisel client --fingerprint "       " 192.168.1.100:8080 0.0.0.0:9999:192.168.1.100:9999 (without 0.0.0.0 also works)
 ```
 
 
