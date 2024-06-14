@@ -33,5 +33,11 @@ $lastname
 $lastname.$firstname
 $lastname$(echo $firstname | cut -c1)
 $lastname-$(echo $firstname | cut -c1)
-$lastname.$(echo $firstname | cut -c1)" >> formatted_name_wordlist.txt
+$lastname.$(echo $firstname | cut -c1)
+$lastname$(echo $lastname | cut -c1)
+$lastname-$(echo $lastname | cut -c1)
+$lastname.$(echo $lastname | cut -c1)
+$firstname$(echo $firstname | cut -c1)
+$firstmane-$(echo $firstname | cut -c1)
+$firstname.$(echo $firstname | cut -c1)" >> formatted_name_wordlist.txt
 done
