@@ -24,7 +24,7 @@ ssh -D 4444 compromised_machine@192.168.1.110
 ## Chisel Proxy
 - Execute following command on the compromised machine
 ```
-chisel server --sock5 --reverse
+chisel server --socks5 --reverse
 ```
 - Chisel server will be on port 8080 of the attacking machine(chisel command executing machine)
 - Connect back from compromised machine via Fingerprint generated from server command
