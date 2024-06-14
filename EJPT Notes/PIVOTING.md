@@ -24,8 +24,6 @@ ssh -D 4444 compromised_machine@192.168.1.110
 
 ## Metasploit 
 
-
-
 # SSH Port Forwarding 
 
 ## Discovering Alive Hosts from Compormised Machine
@@ -55,10 +53,20 @@ ssh -L 8080:192.168.2.100:80 compromised_machine@192.168.1.100
 
 ## Reverse
 
-- You want to make a localhost port 80 on your "ssh command executing machine" accessible from 192.168.1.100 on port 8080.
+- You want to make a localhost port 80 of your "ssh command executing machine(attacking machine)192.168.1.100" accessible from 192.168.1.110(compromised machine) on port 8080.
 
 ```
 ssh -R 8080:localhost:80 compromised_machine@192.168.1.100
 ```
 
-## 
+# Chisel Port Forwarding
+- First host a chisel server to listen on attacking machine
+```
+chisel server --sock5 --reverse
+```
+- Make magic in compromised machine(victim 1)
+- Making the victim2's port 80 accessible from the attacking machine's port 8000 (Same as SSH -L) port forwarding
+```
+chisel client --fingerprint "fingerprint_generated_from_attacking_machine" 192.168.1.100:8080(ip and port of server) R:8000:192.168.2.100:80
+```
+
