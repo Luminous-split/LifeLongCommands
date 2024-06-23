@@ -2,3 +2,7 @@
 ```
 Get-ADUser -Filter *
 ```
+
+```
+Get-ADOrganizationalUnit -Filter *
+```
