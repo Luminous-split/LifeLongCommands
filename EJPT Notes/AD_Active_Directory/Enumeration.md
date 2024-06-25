@@ -38,15 +38,35 @@ Get-DomainComputer  | select name, operatingsystemversion
 ## Enumerate DomainGroups
 ```
 Get-NetGroup
+Get-NetGroupMember | select membername
 ```
 
 ## Enumerate DomainShares
+```
+Get-Domainshare 
+Get-DomainShare -computername prod.security.local -verbose
+Get-DomainShare -computername prod.security.local -verbose -checkshareaccess
+Get-Netshare (on localhost)
+```
 
 ## Enumerate DomainGPOs and OUs
+```
+Get-NetGPO | select displayname
+Get-NetOU | select name, brnyr
+```
 
 ## Enumerate Domain Trusts and Forest Trusts
+```
+Get-NetDomainTrust 
+Get-NetForest
+Get-NetForestTrust
+Get-NetForest -forest forestname
+
+Get-NetForestDomain
+```
 
 ## Enumerate ACLs
+
 
 ## Enumerate AS-REP roastable accounts
 
