@@ -1,3 +1,5 @@
+## Kerberoasting
+- First find the user with SPN enabled
 ```
 Add-Type -AssemblyName system.IdentityModel
 ```
