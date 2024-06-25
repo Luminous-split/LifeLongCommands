@@ -25,7 +25,7 @@ Get-DomainUser
 Get-DomainUser | select samaccountusername, objectsid
 Get-DomainUser -identity student -properties cn, useraccountcontrol
 
-```x
+```
 
 
 ## Enumerate DomainComputers
@@ -63,12 +63,28 @@ Get-NetForestTrust
 Get-NetForest -forest forestname
 
 Get-NetForestDomain
+
+Get-DomainTrustMapping
 ```
 
 ## Enumerate ACLs
+```
+Get-DomainObjectACL -samaccountname 'users' -resolveGUIDs
+Get-DomainObjectACL -Identity 'Eliz_guizman' -resolveGUIDs
+Find-InterestingDomainACL -resolveGUIDs
+Get-ObjectACL -samacountname name -resolveGUIDs | ? { $_.ActiveDirectoryRights -like 'genericall'}
+
+```
 
 
 ## Enumerate AS-REP roastable accounts
+```
+Get-NetUser -PreauthNotRequired | select samaccountname
+```
 
 ## Enumerate Keberoastable accounts
+```
+Get-NetUser -SPN | select samaccountname, serviceprincipalname
+
+```
 
