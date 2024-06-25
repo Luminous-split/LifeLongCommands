@@ -1,5 +1,10 @@
 # Import or Invoke or Load PowerUp.ps1
 
+## Find Local admin access
+```
+Find-LocalAdminAccess
+```
+
 ## Enumerate Local User and Groups
 ```
 Get-LocalUser | ft or fl name, enabled, lastlogon
