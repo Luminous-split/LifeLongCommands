@@ -6,10 +6,17 @@ Get-LocalUser | ft or fl name, enabled, lastlogon
 Get-LocalGroup | ft or fl name, Description
 net accounts
 net user administrator
+Get-NetIpConfiguration | fl interfacealias,interfaceindex, ipv4address
+Get-DnsClientServerAddress -AddressFamily ipv4
 ```
 ## Enumerate Domain
 ```
-Get-Domain 
+Get-Domain
+Get-Domain domain.local
+Get-DomainSID
+Get-DomainPolicy
+(Get-DomainPolicy).systemaccess
+
 ```
 
 ## Enumerate DomainUsers
