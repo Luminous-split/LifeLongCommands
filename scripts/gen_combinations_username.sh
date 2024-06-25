@@ -39,5 +39,5 @@ $lastname-$(echo $lastname | cut -c1)
 $lastname.$(echo $lastname | cut -c1)
 $firstname$(echo $firstname | cut -c1)
 $firstmane-$(echo $firstname | cut -c1)
-$firstname.$(echo $firstname | cut -c1)" >> formatted_name_wordlist.txt
+$firstname.$(echo $firstname | cut -c1)" >> new_users.txt
 done
