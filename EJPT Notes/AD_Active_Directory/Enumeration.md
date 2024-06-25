@@ -20,13 +20,25 @@ Get-DomainPolicy
 ```
 
 ## Enumerate DomainUsers
+```
+Get-DomainUser
+Get-DomainUser | select samaccountusername, objectsid
+Get-DomainUser -identity student -properties cn, useraccountcontrol
+
+```x
 
 
 ## Enumerate DomainComputers
-
+```
+Get-NetComputer
+Get-DomainComputer
+Get-DomainComputer  | select name, operatingsystemversion
+```
 
 ## Enumerate DomainGroups
-
+```
+Get-NetGroup
+```
 
 ## Enumerate DomainShares
 
