@@ -28,6 +28,7 @@ ssh -D 4444 compromised_machine@192.168.1.110
 
 
 ## Chisel Proxy
+https://www.youtube.com/watch?v=pbR_BNSOaMk
 ### Chisel Reverse
 - Execute following command on the compromised machine
 ```
