@@ -25,7 +25,7 @@ for page in {2..91}; do
 
                 OCR_OUTPUT=$(tesseract "$download_file_path/page$page/$dir/$image_count.jpg" -)
 
-                if echo "$OCR_OUTPUT" | grep -q "Removed" || $(stat -f %z "$download_file_path/page$page/$dir/$image_count.jpg"); then
+                if echo "$OCR_OUTPUT" | grep -q -i "Removed" || $(stat -f %z "$download_file_path/page$page/$dir/$image_count.jpg") -lt 1500; then
                     rm $download_file_path/page$page/$dir/$image_count.jpg
                 fi
 
