@@ -1,0 +1,46 @@
+- Ctrl+c to skip normal booting
+- loadkeys (Keyboard layout)
+- setfont (font optional)
+- pacman -S coreutils
+- fdisk -l (To find vda) (pacman -S util-linux : if command not found)
+- fdisk /dev/vda
+- g (gpt partition)
+- n (new gpt partion)
+- no 1 (+512M)
+- t (to change type)
+- uefi 
+- no 2 (+512)
+- t (to change type)
+- swap
+- no 2
+- t (to change type)
+- linux
+- w (to save)
+- fdisk -l (check the partitions)
+- mkfs.ext4 /dev/vda3 (pacman -S e2fsprogs : if command not found)
+- mkfs.fat -F 32 /dev/vda1 (pacman -S dosfstools : if command not found)
+- mkswap /dev/vda2 (pacman -S util-linux : if command not found)
+- mount /dev/vda3 /mnt
+- mount --mkdir /dev/vda1 /mnt/boot
+- swapon /dev/vda2
+- pacman -S arch-install-scripts
+- pacstrap -K /mnt base base-devel linux linux-firmware e2fsprogs dhcpcd networkmanager vim neovim man-db man-pages texinfo
+- genfstab -U /mnt >> /mnt/etc/fstab
+- arch-chroot /mnt ( pacman -S arch-install-scripts : if command not found)
+- ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
+- hwclock --systohc
+- vim /etc/locale.gen ( uncomment relevent language and keyboard )
+- locale-gen
+- vim /etc/locale.conf ( LANG=en_US.UTF-8 )
+- vim /etc/vconsole.conf ( KEYMAP=us \n FONT=somefont )
+- vim /etc/hosts ( 127.0.0.1 localhost\n::1 localhost 127.0.0.1 hostname )
+- mkinitcpio -P
+- passwd
+- pacman -S grub efibootmgr
+- grub-install --efi-directory=/boot --bootloader-id=GRUB
+- grub-mkconfig -o /boot/grub/grub.cfg
+- exit
+- umount -R /mnt
+- poweroff
+- 
+# Finish Installation
