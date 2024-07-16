@@ -21,7 +21,7 @@
 - sudo systemctl enable dhcpcd
 - sudo pacman -S blueman bluez bluez-utils
 - sudo systemctl enable bluetooth
-- sudo vum /etc/pacman.conf (optional to change candy eating display)
+- sudo vim /etc/pacman.conf (optional to change candy eating display)
 - sudo systemctl enable fstrim.timer
 - sudo pacman -S xorg-server xorg-apps xorg-xinit xclip
 - sudo pacman -S i3
@@ -36,7 +36,7 @@
 - sudo pacman -S polybar
 - sudo pacman -S ranger feh ueberzug
 - sudo pacman -S firefox vlc
-- sudo pacman -S bat fzf fd ripgrep lsd htop nodejs npm ysrn wget
+- sudo pacman -S bat fzf fd ripgrep lsd htop nodejs npm yarn wget
 - sudo reboot
 
 #remember "libbsd"
