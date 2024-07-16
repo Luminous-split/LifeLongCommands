@@ -26,7 +26,7 @@
 - pacman -S arch-install-scripts
 - pacstrap -K /mnt base base-devel linux linux-firmware e2fsprogs dhcpcd networkmanager vim neovim man-db man-pages texinfo
 - genfstab -U /mnt >> /mnt/etc/fstab
-- arch-chroot ( pacman -S arch-install-scripts : if command not found)
+- arch-chroot /mnt ( pacman -S arch-install-scripts : if command not found)
 - ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 - hwclock --systohc
 - vim /etc/locale.gen ( uncomment relevent language and keyboard )
