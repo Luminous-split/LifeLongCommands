@@ -1,0 +1,23 @@
+- ENTER
+- CMD key + enter (open terminal)
+- firefox and check internet
+- CMD key + d (search alacritty)
+- setxkbamp us (keyboard)
+- edit /etc/x11/xorg.conf.d/10-monitor.conf
+- edit /etc/x11/xorg.conf.d/40-libinput.conf
+- edit .xinitrc
+- edit .Xresources
+- cd .config/i3
+- edit config file with i3-gaps config
+- reboot
+- edit display in UTM ( upscaling : linear, click: retina )
+- edit .zshrc
+- exit
+- cd .config and mkdir alacritty; cd alacritty; nano alacritty.yml
+- cd .config and mkdir picom ; cd picom; nano picom.conf
+- cd .config and mkdir polybar; cd polybar; nano config.ini
+- nano launch.sh
+- cd .conf and mkdir bat; cd bat ; nano config
+- cd .config and mkdir nvim; cd nvim ; nano init.lua; mkdir lua ; cd lua; nano lsp.lua;nano mappings.lua
+- plugins.lua, scripts.lua, settings.lua
+- 
