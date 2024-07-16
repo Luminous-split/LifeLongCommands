@@ -1,6 +1,7 @@
 - Ctrl+c to skip normal booting
 - loadkeys (Keyboard layout)
 - setfont (font optional)
+- pacman -S coreutils
 - fdisk -l (To find vda) (pacman -S util-linux : if command not found)
 - fdisk /dev/vda
 - g (gpt partition)
