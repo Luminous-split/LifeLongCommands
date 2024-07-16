@@ -24,7 +24,7 @@
 - sudo vim /etc/pacman.conf (optional to change candy eating display)
 - sudo systemctl enable fstrim.timer
 - sudo pacman -S xorg-server xorg-apps xorg-xinit xclip
-- sudo pacman -S i3
+- sudo pacman -S i3 ( !!!! choose noto-fonts, : #remember "libbsd")
 - vim .xinitrc ( and add exec i3 )
 - sudo pacman -S picom
 - sudo pacmna -S noto-fonts
