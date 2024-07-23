@@ -1,3 +1,4 @@
+# Passive
 ## Osint
 - Examples: Searching social media platforms (e.g., LinkedIn, Twitter) for employee profiles, company information, or job postings.
 - Browsing public forums or websites for discussions about the organization or its technologies.
@@ -11,6 +12,7 @@
 - Client fingerprinting is a technique used to gather information about a user's web browser and software stack in order to aid in the development of tailor made (client specific) payloads for initial access.
 - In the context of client-side information gathering, client fingerprinting can be used to identify key information about the client-side software running on the target(s) system. For example, browser and browser version, OS and system architecture etc.
 
+# Active
 ## Social Engineering:
 - Examples: Engaging with target individuals or employees through phone calls, emails, or other communication channels to gather sensitive information, credentials, or access permissions.
 - Tools: Social engineering toolkits like SET (Social-Engineer Toolkit),
