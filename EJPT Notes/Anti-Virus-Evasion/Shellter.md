@@ -35,3 +35,8 @@ wine --version
 winecfg
 ```
 - And we are gtg
+
+- UPX encode
+```
+upx --best --ultra-brute -f backdoor.exe -o backdoor.exe
+```
