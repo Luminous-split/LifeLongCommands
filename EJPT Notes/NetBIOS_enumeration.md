@@ -1,7 +1,7 @@
 ## nmap Enumeration 
 
 ```
-nmap -sU -sV -T4 --script nbtstat.nse -p137 -Pn 10.4.30.139
+nmap -sU -sV -T4 --script nbstat.nse -p137 -Pn 10.4.30.139
 ```
 
 ## nbtscan
