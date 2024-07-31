@@ -7,10 +7,11 @@ whois
 
 ```
 theHarvester -d some_domain.com -b google,linkedin,dnsdumbster,crtsh,yahoo
-``` 
+```
+```
 dnsrecon
-
 WafWoof
+```
 
 ## Website Tools
 ```
