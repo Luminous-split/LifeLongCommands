@@ -1,0 +1,43 @@
+- systemctl enable NetworkManager
+- pacman -S neofetch
+- pacman -Syu
+- pacman -S sudo
+- useradd -m -g users -G wheel,storage,power,audio teal
+- passwd
+- visudo and uncomment passwd all
+- su teal
+- sudo pacman -S xdg-user-dirs
+- sudo pacman -S git
+- cd Document
+- mkdir aur
+- cd aur
+- git clone http://aur.archlinux.org/yay.git
+- cd yay
+- makepkg -si
+- sudo pacman -S spice-vdagent
+- sudo pacman -S pulseaudio alsa-utils alsa-plugins pavucontrol
+- sudo pacman -S openssh iw wpa_supplicant
+- sudo systemctl enable sshd
+- sudo systemctl enable dhcpcd
+- sudo pacman -S blueman bluez bluez-utils
+- sudo systemctl enable bluetooth
+- sudo vim /etc/pacman.conf (optional to change candy eating display)
+- sudo systemctl enable fstrim.timer
+- sudo pacman -S xorg-server xorg-apps xorg-xinit xclip
+- sudo pacman -S i3 ( !!!! choose noto-fonts, : #remember "libbsd")
+- vim .xinitrc ( and add exec i3 )
+- sudo pacman -S picom
+- sudo pacmna -S noto-fonts
+- sudo yay -S nerd-fonts-complete
+- sudo pacman -S zsh
+- chsh -s /bin/zsh
+- sudo pacman -S rxvt-unicode alacritty kitty
+- sudo pacman -S dmenu rofi
+- sudo pacman -S polybar
+- sudo pacman -S ranger feh ueberzug
+- sudo pacman -S firefox vlc
+- sudo pacman -S bat fzf fd ripgrep lsd htop nodejs npm yarn wget
+- sudo reboot
+
+#remember "libbsd"
+  
