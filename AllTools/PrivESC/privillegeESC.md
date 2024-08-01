@@ -1,6 +1,7 @@
 # Linux Privesc
 - Find sudo permitted files
-```sudo -l
+```
+sudo -l
 ```
 
 - Find SUID binaries
