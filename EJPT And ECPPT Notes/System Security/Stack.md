@@ -22,3 +22,19 @@
 
 • A stack frame, also known as an activation record or call frame, is a data structure used by the CPU and the operating system to manage function calls and execution flow within a program.
 • It contains information related to a single function call, including parameters, local variables, return address, and other relevant data.
+
+### Procedures & Functions
+• Now that we know more about the Stack, we will investigate how procedures and functions work. It is important to know that procedures and functions alter the normal flow of the process.
+• When a procedure or a function terminates, it returns control to the statement or instruction that called the function.
+• Functions contain two important components, the prologue and the epilogue, which we will discuss later, but here is a very quick overview.
+• The prologue prepares the stack to be used, similar to putting a bookmark in a book. When the function has completed, the epilogue resets the stack to the prologue settings.
+• The Stack consists of logical stack frames (portions/areas of the Stack), that are PUSHed when calling a function and POPped when returning a value.
+• When a subroutine, such as a function or procedure, is started, a stack frame is created and assigned to the current ESP location (top of the stack); this allows the subroutine to operate independently in its own location in the stack.
+• When the subroutine ends, two things happen:
+• The program receives the parameters passed from the subroutine.
+• The Instruction Pointer (EIP) is reset to the location at the time of the initial call.
+• In other words, the stack frame keeps track of the location where each subroutine should return the control when it terminates.
+• We will break down this process in a more specific example for you to better understand how stack frames work.
+• First, we will explain the operations, and then we will illustrate how it happens in an actual program. When this program is run, the following process occurs.
+![image](https://github.com/user-attachments/assets/587f615f-ea4a-4d55-be2b-0fac92d5ffc8)
+
