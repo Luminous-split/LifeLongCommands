@@ -51,3 +51,4 @@ https://raw.githubusercontent.com/rootSySdk/PowerGPOAbuse/master/PowerGPOAbuse.p
 ```
 wget https://github.com/byronkg/SharpGPOAbuse/raw/main/SharpGPOAbuse-master/SharpGPOAbuse.exe
 ```
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
