@@ -22,6 +22,12 @@ powershell -ep bypass
 Invoke-PrivescAudit
 ```
 
+## PrivescCheck
+- Link
+```
+https://github.com/itm4n/PrivescCheck/blob/master/PrivescCheck.ps1
+```
+
 ## Powerview
 - Link
 ```
@@ -53,5 +59,37 @@ wget https://github.com/byronkg/SharpGPOAbuse/raw/main/SharpGPOAbuse-master/Shar
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # Window Privesc
+## PowerUp
+- Check Default Username and Password from Registry
+```
+reg query "HKLM\Software\Microsoft\Windows Nt\CurrentVersion\Winlogon" /v DefaultUserName
+reg query "HKLM\Software\Microsoft\Windows Nt\CurrentVersion\Winlogon" /v DefaultPassword
+reg query "HKLM\Software\Microsoft\Windows Nt\CurrentVersion\Winlogon" /v AutoAdminLogon
+```
 
+- Check the service that current user can modify
+```
+Get-ModifiableService
+```
+
+- Check the unquoted service name
+```
+Get-ServiceUnquoted
+```
+
+## PrivescCheck
+- Load ps1 script and run 
+```
+powershell -ep bypass -c ". .\PrivescCheck.ps1;Invoke-PrivescCheck "
+```
+
+- Check window services for user escalating
+```
+Invoke-ServiceAudit
+```
+
+- Check outdated and potentially vulnerable software
+```
+Invoke-AuditInstalledPrograms
+```
 
