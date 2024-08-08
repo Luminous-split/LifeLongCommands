@@ -122,9 +122,15 @@ C:\Users\student\AppData\Roaming\Microsoft\Windows\Powershell\PSReadLine\Console
 - Modify the service configuration
 - Restart the service
 ```
-
+Restart-Service -name "Service Name"
 ```
 
+## Registry Autorun
+- Check the auto run file permission
+```
+Get-Acl -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\run | Format-List
+```
 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # Advanced PrivESC Techniques
+
