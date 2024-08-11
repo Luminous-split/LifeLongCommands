@@ -1,5 +1,5 @@
 ## As-REP Roasting
-- First Find User with Keberos No_Preauthentication
+- First Find User with Keberos No_Preauthentication ( DONT_REQ_PREAUTH )
 ```
 . .\PowerView.ps1
 ```
