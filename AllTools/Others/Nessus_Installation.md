@@ -24,3 +24,6 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
+## Enable and start
+```sudo systemctl enable --now nessus
+```
