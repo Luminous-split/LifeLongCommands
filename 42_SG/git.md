@@ -15,7 +15,7 @@ git add filename
 git commit -m "description"
 ```
 
-## Building repository and commit and pusghing
+## Building repository and commit and pushing
 ```
 git remote -v # checking remote repo
 git remote add origin https://github.com/username/repo_name.git
