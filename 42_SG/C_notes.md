@@ -18,7 +18,10 @@ _Bool	  %d
 ```
 ## Pointers
 ```
-*pointer --> Memory address that pointer is pointing.
+*pointer --> Memory address that pointer is pointing.(Dereference)
 pointer --> Value of the pointer.
 &pointer --> Memory address of that pointer.
 ```
+
+## Difference between unions and struct
+![image](https://github.com/user-attachments/assets/cb1d2a1a-8e16-4349-b19f-200f5976bb0a)
