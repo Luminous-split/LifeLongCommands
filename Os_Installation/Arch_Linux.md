@@ -25,17 +25,24 @@
 - w (to save)
 #### End of Disk Partition
 - fdisk -l (check the partitions)(Should be "EFI System 512M, Linux Swap 512M, Linux Filesystem 40G")
-  
+
+#### Format filesystem format to ext4(Extended filesystem)(Usually used in linux)
 - mkfs.ext4 /dev/vda3 (pacman -S e2fsprogs : if command not found)
-- mkfs.fat -F 32 /dev/vda1 (pacman -S dosfstools : if command not found)
+- mkfs.fat -F 32 /dev/vda1 (pacman -S dosfstools : if command not found)(will see some errors it would be ok)
 - mkswap /dev/vda2 (pacman -S util-linux : if command not found)
+#### End of formatting
+
+#### Mount and swap
 - mount /dev/vda3 /mnt
 - mount --mkdir /dev/vda1 /mnt/boot
 - swapon /dev/vda2
-- pacman -S arch-install-scripts
+  
+- pacman -S arch-install-scripts (optional)
 - pacstrap -K /mnt base base-devel linux linux-firmware e2fsprogs dhcpcd networkmanager vim neovim man-db man-pages texinfo
 - genfstab -U /mnt >> /mnt/etc/fstab
 - arch-chroot /mnt ( pacman -S arch-install-scripts : if command not found)
+#### End of Mount and swap
+  
 - ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 - hwclock --systohc
 - vim /etc/locale.gen ( uncomment relevent language and keyboard )
