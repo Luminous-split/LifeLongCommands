@@ -41,155 +41,137 @@ int main() {
 
 ---
 
-## 3. strlen
+## 3. putchar
 
 **Declaration:**
 ```c
-size_t strlen(const char *str);
+int putchar(int character);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char text[] = "Hello";
-    printf("Length: %lu\n", strlen(text));
+    putchar('A');
     return 0;
 }
 ```
 
 ---
 
-## 4. strcpy
+## 4. getchar
 
 **Declaration:**
 ```c
-char *strcpy(char *dest, const char *src);
+int getchar(void);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char src[] = "Hello";
-    char dest[10];
-    strcpy(dest, src);
-    printf("Copied: %s\n", dest);
+    char ch;
+    printf("Enter a character: ");
+    ch = getchar();
+    printf("You entered: %c\n", ch);
     return 0;
 }
 ```
 
 ---
 
-## 5. strcat
+## 5. puts
 
 **Declaration:**
 ```c
-char *strcat(char *dest, const char *src);
+int puts(const char *str);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char str1[20] = "Hello, ";
-    char str2[] = "World!";
-    strcat(str1, str2);
-    printf("Concatenated: %s\n", str1);
+    puts("Hello, World!");
     return 0;
 }
 ```
 
 ---
 
-## 6. strcmp
+## 6. gets (Deprecated, Unsafe)
 
 **Declaration:**
 ```c
-int strcmp(const char *str1, const char *str2);
+char *gets(char *str);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char str1[] = "Hello";
-    char str2[] = "World";
-    
-    if (strcmp(str1, str2) == 0)
-        printf("Strings are equal.\n");
-    else
-        printf("Strings are different.\n");
-    
+    char str[100];
+    printf("Enter a string: ");
+    gets(str);
+    printf("You entered: %s\n", str);
     return 0;
 }
 ```
 
 ---
 
-## 7. malloc
+## 7. fread
 
 **Declaration:**
 ```c
-void *malloc(size_t size);
+size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int *arr = (int *)malloc(5 * sizeof(int));
-    if (arr == NULL) {
-        printf("Memory allocation failed\n");
-        return 1;
-    }
-    for (int i = 0; i < 5; i++) arr[i] = i * 10;
-    for (int i = 0; i < 5; i++) printf("%d ", arr[i]);
-    free(arr);
+    FILE *file = fopen("test.bin", "rb");
+    char buffer[100];
+    fread(buffer, sizeof(char), 100, file);
+    fclose(file);
     return 0;
 }
 ```
 
 ---
 
-## 8. free
+## 8. fwrite
 
 **Declaration:**
 ```c
-void free(void *ptr);
+size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);
 ```
 
 **Example:**
 ```c
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int *ptr = (int *)malloc(sizeof(int));
-    *ptr = 100;
-    printf("Value: %d\n", *ptr);
-    free(ptr);
+    FILE *file = fopen("test.bin", "wb");
+    char data[] = "Hello, File!";
+    fwrite(data, sizeof(char), sizeof(data), file);
+    fclose(file);
     return 0;
 }
 ```
 
 ---
 
-## 9. fopen
+## 9. fprintf
 
 **Declaration:**
 ```c
-FILE *fopen(const char *filename, const char *mode);
+int fprintf(FILE *stream, const char *format, ...);
 ```
 
 **Example:**
@@ -198,21 +180,19 @@ FILE *fopen(const char *filename, const char *mode);
 
 int main() {
     FILE *file = fopen("test.txt", "w");
-    if (file) {
-        fprintf(file, "Hello, File!\n");
-        fclose(file);
-    }
+    fprintf(file, "Formatted number: %d\n", 42);
+    fclose(file);
     return 0;
 }
 ```
 
 ---
 
-## 10. fclose
+## 10. fscanf
 
 **Declaration:**
 ```c
-int fclose(FILE *stream);
+int fscanf(FILE *stream, const char *format, ...);
 ```
 
 **Example:**
@@ -221,8 +201,73 @@ int fclose(FILE *stream);
 
 int main() {
     FILE *file = fopen("test.txt", "r");
-    if (file) {
-        fclose(file);
-    }
+    int num;
+    fscanf(file, "%d", &num);
+    printf("Read number: %d\n", num);
+    fclose(file);
     return 0;
 }
+```
+
+---
+
+## 11. fseek
+
+**Declaration:**
+```c
+int fseek(FILE *stream, long offset, int whence);
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("test.txt", "r");
+    fseek(file, 5, SEEK_SET);
+    fclose(file);
+    return 0;
+}
+```
+
+---
+
+## 12. ftell
+
+**Declaration:**
+```c
+long ftell(FILE *stream);
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("test.txt", "r");
+    printf("Current position: %ld\n", ftell(file));
+    fclose(file);
+    return 0;
+}
+```
+
+---
+
+## 13. rewind
+
+**Declaration:**
+```c
+void rewind(FILE *stream);
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("test.txt", "r");
+    rewind(file);
+    fclose(file);
+    return 0;
+}
+```
