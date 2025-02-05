@@ -1,14 +1,21 @@
 - Ctrl+c to skip normal booting
-- loadkeys (Keyboard layout)
-- setfont (font optional)
-- pacman -S coreutils
+- loadkeys (Optional) --> (Keyboard layout)
+- setfont de_CH-latin1 (can use other fonts) --> font
+- setfont Lat2-Terminus16 --> font
+
+- ls /sys/firmware/efi/efivars --> Checking for UEFI system
+
+- pacman -S coreutils --> install required tool
+  
 - fdisk -l (To find vda) (pacman -S util-linux : if command not found)
-- fdisk /dev/vda
+- fdisk /dev/vda --> It will enter disk partition mode
+#### Start of Disk Partition
 - g (gpt partition)
-- n (new gpt partion)
+##### New Partition
+- n --> (new gpt partion)
 - no 1 (+512M)
-- t (to change type)
-- uefi 
+- t (to change type the type of the created partition)
+- uefi --> UEFI type
 - no 2 (+512)
 - t (to change type)
 - swap
@@ -16,7 +23,9 @@
 - t (to change type)
 - linux
 - w (to save)
-- fdisk -l (check the partitions)
+#### End of Disk Partition
+- fdisk -l (check the partitions)(Should be "EFI System 512M, Linux Swap 512M, Linux Filesystem 40G")
+  
 - mkfs.ext4 /dev/vda3 (pacman -S e2fsprogs : if command not found)
 - mkfs.fat -F 32 /dev/vda1 (pacman -S dosfstools : if command not found)
 - mkswap /dev/vda2 (pacman -S util-linux : if command not found)
