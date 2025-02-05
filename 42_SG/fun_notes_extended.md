@@ -120,8 +120,8 @@ int main() {
     return 0;
 }
 ```
----
 
+---
 ## fgets
 
 **Declaration:**
@@ -140,7 +140,7 @@ int main() {
     printf("You entered: %s", buffer);
     return 0;
 }
-
+```
 
 ---
 
