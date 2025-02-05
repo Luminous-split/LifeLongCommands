@@ -18,8 +18,8 @@ _Bool	  %d
 ```
 ## Pointers
 ```
-*pointer --> Memory address that pointer is pointing.(Dereference)
-pointer --> Value of the pointer.
+*pointer --> (Dereference)Value in pointer (value of the pointer pointed variable)
+pointer --> Memory address that pointer is pointing.
 &pointer --> Memory address of that pointer.
 ```
 
