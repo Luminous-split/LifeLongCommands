@@ -47,11 +47,12 @@
 - hwclock --systohc
 - vim /etc/locale.gen ( uncomment relevent language and keyboard )
 - locale-gen
-- vim /etc/locale.conf ( LANG=en_US.UTF-8 )
-- vim /etc/vconsole.conf ( KEYMAP=us \n FONT=somefont )
-- vim /etc/hosts ( 127.0.0.1 localhost\n::1 localhost 127.0.0.1 hostname )
-- mkinitcpio -P
+- vim /etc/locale.conf (write in: LANG=en_US.UTF-8 )
+- vim /etc/vconsole.conf (write in: KEYMAP=de_CH-latin1 \n FONT=Lat2-Terminus16 )
+- vim /etc/hosts ( 127.0.0.1 localhost\n::1 localhost \n127.0.0.1 hostname )
 - passwd
+- mkinitcpio -P
+#### Bootloader
 - pacman -S grub efibootmgr
 - grub-install --efi-directory=/boot --bootloader-id=GRUB
 - grub-mkconfig -o /boot/grub/grub.cfg
