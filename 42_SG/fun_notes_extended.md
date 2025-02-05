@@ -120,6 +120,27 @@ int main() {
     return 0;
 }
 ```
+---
+
+## fgets
+
+**Declaration:**
+```c
+char *fgets(char *str, int n, FILE *stream);
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main() {
+    char buffer[100];
+    printf("Enter a string: ");
+    fgets(buffer, sizeof(buffer), stdin);
+    printf("You entered: %s", buffer);
+    return 0;
+}
+
 
 ---
 
