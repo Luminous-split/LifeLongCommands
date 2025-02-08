@@ -292,3 +292,23 @@ int main() {
     return 0;
 }
 ```
+
+---
+
+## 14. write
+
+**Declaration:**
+```c
+ssize_t write(int file_descriptor, const void *buff, size_t count); (file descriptor --> 1 for stdout, 2 for stderr)
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main() {
+    write(1, ,
+    fclose(file);
+    return 0;
+}
+```
