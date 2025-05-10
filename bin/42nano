@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+if [[ -d "working" ]]; then
+	if [[ -f $1 ]]; then
+		mv $1 working/
+		vim -c "Stdheader" -c "wq" $1 && nano $1
+ 		else
+ 		echo "Usage : 42nano filename"
+	fi
+else
+	echo "Please run inside valid project directory."
+fi

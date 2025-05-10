@@ -1,0 +1,9 @@
+Script started on 2025-05-08 18:58:23+08:00 [<not executed on terminal>]
+[?2004hksan@c2r1s12:~/bin$ clear
+[?2004l[H[2J[3J[?2004hksan@c2r1s12:~/bin$ ls
+[?2004l42nano	ccdir	ccmd   copy  goforlunch  pste	     zedit
+bfl	cclone	chcmd  dcmd  intra	 typescript
+[?2004hksan@c2r1s12:~/bin$ exit
+[?2004lexit
+
+Script done on 2025-05-08 18:58:27+08:00 [COMMAND_EXIT_CODE="0"]

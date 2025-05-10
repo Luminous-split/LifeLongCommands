@@ -1,0 +1,9 @@
+#!/bin/zsh
+cat $0
+
+if [[ $1 == 'pj' ]]; then
+	firefox -new-window https://projects.intra.42.fr/ &
+elif [[ $1 == 'pf' ]]; then
+	firefox -new-window https://profile.intra.42.fr/ &
+fi
+

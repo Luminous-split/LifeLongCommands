@@ -1,0 +1,5 @@
+#!/bin/zsh
+cat $0
+xclip -sel clip
+
+

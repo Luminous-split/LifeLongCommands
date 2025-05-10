@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+bin="$HOME/bin/$1"
+if [[ -n $1 ]]; then
+	if [[ ! -f "$bin" ]] || [ "$(sed -n 1p "$bin")" != '#!/bin/zsh' ]; then
+		 echo "" >> $bin && sed -i '1s|^|#!/bin/zsh\ncat $0\n|' $bin
+	fi
+	nano -l $bin
+	echo "Created custom command..."
+	chmod +x $bin
+	mv $HOME/bin/.zipped $HOME/bin/.notzipped
+else
+	echo "Usage: ccmd [newcmdname]"
+fi

@@ -1,0 +1,3 @@
+#!/bin/zsh
+cat $0
+nano -l $HOME/.zshrc && source $HOME/.zshrc
